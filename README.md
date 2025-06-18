@@ -1,6 +1,6 @@
 # OIIIIIIIII
 
-Um dos modelos abordados no meu trabalho de conclusão de curso, que tratou de modelos inflacionados no contexto da Inferência Bayesiana, foi o Zero-Inflated Negative Binomial (ZINB). Abaixo, apresento um trecho da seção dedicada ao ZINB, assim como também o arquivo em R com a implementação do algoritmo utilizando um dos conjuntos de dados analisados.
+Um dos modelos abordados no meu trabalho de conclusão de curso, que tratou de modelos de contagem no contexto da Inferência Bayesiana, foi o Zero-Inflated Negative Binomial (ZINB). Abaixo, apresento um trecho da seção dedicada ao ZINB, assim como também o arquivo em R com a implementação do algoritmo utilizando um dos conjuntos de dados analisados.
 
 ## ZINB
 
