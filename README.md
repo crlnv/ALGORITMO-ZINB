@@ -24,7 +24,7 @@ Condicional completa para ![lambda](https://latex.codecogs.com/png.image?\dpi{11
 
 ![Condicional completa λ](https://latex.codecogs.com/png.image?\dpi{150}\lambda\mid\mathbf{x},z,\phi%20\sim%20\mathrm{Beta}\left(\phi\sum_{i=1}^n(1-z_i)&plus;\alpha,\;\sum_{i=1}^n&space;x_i(1-z_i)&plus;\beta\right))
 
-Por último, dada a *priori* 
+Por último, dada a *priori* \\
 ![Gama](https://latex.codecogs.com/png.image?\dpi{120}\text{Gama}(\delta,\;\eta)), a condicional completa para 
 ![phi](https://latex.codecogs.com/png.image?\dpi{120}\phi) é dada por:
 
