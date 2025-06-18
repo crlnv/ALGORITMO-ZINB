@@ -1,6 +1,6 @@
 # OIIIIIIIII
 
-Um dos modelos abordados no meu trabalho de conclusão de curso, que tratou de modelos de contagem no contexto da Inferência Bayesiana, foi o Zero-Inflated Negative Binomial (ZINB). Abaixo, apresento um trecho da seção dedicada ao ZINB, assim como também o arquivo em R com a implementação do algoritmo utilizando um dos conjuntos de dados analisados.
+Um dos modelos abordados no meu trabalho de conclusão de curso, que tratou de modelos de contagem no contexto da Inferência Bayesiana, foi o Zero-Inflated Negative Binomial (ZINB). Abaixo, apresento um trecho da seção dedicada ao ZINB, assim como também o arquivo em R com a implementação do algoritmo utilizando um dos conjuntos de dados analisados. Qualquer coisa esquisita aqui a culpa é do CodeCogs já que o Git não usa linguagem LaTeX e sim Markdown, enfim. Em caso de dúvidas, email me! Abs
 
 ## ZINB
 
@@ -34,5 +34,5 @@ Por último, dada a *priori*
 A simulação dos parâmetros do modelo ZINB ocorre de forma similar ao modelo binomial negativo:
 
 - ![phi](https://latex.codecogs.com/png.image?\dpi{110}\phi): por Metropolis–Hastings  
-- ![p, lambda, z](https://latex.codecogs.com/png.image?\dpi{110}p,\\lambda,\z): por amostrador de Gibbs
+- ![p, lambda, z](https://latex.codecogs.com/png.image?\dpi{110}p,\lambda,z): por amostrador de Gibbs
 
