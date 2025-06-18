@@ -1,4 +1,8 @@
-# HELLOOOOO
+# OIIIIIIIII
+
+**Um dos modelos que usei no meu trabalho de conclusão de curso sobre modelos inflacionados no contexto da Inferência Bayesiana foi o Zero-Inflated Negative Binomial. Abaixo segue um trecho sobre a seção do ZINB assim como também a implementação no R com um dos conjuntos de dados que eu usei.**
+
+## ZINB
 
 O modelo ZINB é uma escolha popular para modelar dados inflacionados por zeros, pois acomoda simultaneamente a inflação de zeros e a sobredispersão, característica de um dos parâmetros da distribuição binomial negativa, se mostrando como alternativa ao modelo Poisson.
 
