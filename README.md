@@ -22,7 +22,12 @@ Assumindo a priori ![lambda prior](https://latex.codecogs.com/png.image?\dpi{110
 
 Condicional completa para ![lambda](https://latex.codecogs.com/png.image?\dpi{110}\lambda):
 
-Por fim, assumindo a priori ![phi prior](https://latex.codecogs.com/png.image?\dpi{110}\phi%20\sim%20\mathrm{Gamma}(\delta,\eta)), a condicional completa para ![phi](https://latex.codecogs.com/png.image?\dpi{110}\phi) é proporcional a:
+Por último, dada a *priori* 
+![Gama](https://latex.codecogs.com/png.image?\dpi{120}\text{Gama}(\delta,\;\eta)), a condicional completa para 
+![phi](https://latex.codecogs.com/png.image?\dpi{120}\phi) é dada por:
+
+![Equação condicional phi](https://latex.codecogs.com/png.image?\dpi{150}\pi(\phi\mid\mathbf{x},\;z,\;\lambda)\;\propto\;\prod_{i=1}^{n}\left[\frac{\Gamma(\phi\;+\;x_i)}{\Gamma(\phi)}\lambda^\phi\right]\phi^{\delta-1}e^{-\eta\phi}.)
+
 
 A simulação dos parâmetros do modelo ZINB ocorre de forma similar ao modelo binomial negativo:
 
