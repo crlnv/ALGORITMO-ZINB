@@ -18,14 +18,14 @@ Distribuição condicional completa para \(p\):
 
 ![Condicional completa p](https://latex.codecogs.com/png.image?\dpi{150}p\mid\mathbf{x},\lambda,\phi%20\sim%20\mathrm{Beta}\left(\sum_{i=1}^nz_i+1,\;n-\sum_{i=1}^nz_i+1\right))
 
-Assumindo a priori \(\lambda \sim \mathrm{Beta}(\alpha,\beta)\), temos:
+Assumindo a priori ![lambda prior](https://latex.codecogs.com/png.image?\dpi{110}\lambda%20\sim%20\mathrm{Beta}(\alpha,\beta)), temos:
 
-![Condicional completa λ](https://latex.codecogs.com/png.image?\dpi{150}\lambda\mid\mathbf{x},z,\phi%20\sim%20\mathrm{Beta}\left(\phi\sum_{i=1}^n(1-z_i)&plus;\alpha,\;\sum_{i=1}^n&space;x_i(1-z_i)&plus;\beta\right))
+Condicional completa para ![lambda](https://latex.codecogs.com/png.image?\dpi{110}\lambda):
 
-Por fim, assumindo a priori \(\phi \sim \mathrm{Gamma}(\delta,\eta)\), a condicional completa para \(\phi\) é proporcional a:
-
-![Condicional completa φ](https://latex.codecogs.com/png.image?\dpi{150}\pi(\phi\mid\mathbf{x},z,\lambda)%20\propto%20\prod_{i=1}^{n}%20\frac{\Gamma(\phi+x_i)}{\Gamma(\phi)}\lambda^{\phi}%20\cdot\phi^{\delta-1}%20e^{-\eta\phi})
+Por fim, assumindo a priori ![phi prior](https://latex.codecogs.com/png.image?\dpi{110}\phi%20\sim%20\mathrm{Gamma}(\delta,\eta)), a condicional completa para ![phi](https://latex.codecogs.com/png.image?\dpi{110}\phi) é proporcional a:
 
 A simulação dos parâmetros do modelo ZINB ocorre de forma similar ao modelo binomial negativo:
-- \(\phi\): por **Metropolis–Hastings**,
-- \(p\), \(\lambda\) e \(z\): por **amostrador de Gibbs**.
+
+- ![phi](https://latex.codecogs.com/png.image?\dpi{110}\phi): por Metropolis–Hastings  
+- ![p, lambda, z](https://latex.codecogs.com/png.image?\dpi{110}p,\;\lambda,\;z): por amostrador de Gibbs
+
