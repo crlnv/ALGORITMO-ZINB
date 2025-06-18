@@ -1,36 +1,27 @@
 # HELLOOOOO
 
-O modelo ZINB é uma escolha popular para modelar dados inflacionados por zeros, pois acomoda simultaneamente a inflação de zeros e a sobredispersão, característica de um dos parâmetros da distribuição binomial negativa, se mostrando como mais uma alternativa ao modelo Poisson. Considere a seguinte função de probabilidade aumentada:
-\begin{align}
-    f(\textbf{x}, z|\lambda, \phi) = \prod_{i=1}^{n} \left[ \frac{\Gamma(\phi + x_i)}{\Gamma(\phi) x_i!}\lambda^\phi(1-\lambda)^{x_i}(1-p) \right]^{1-z_i}\left[ pI(x_i = 0) \right]^{z_i}.
-\end{align}
+O modelo ZINB é uma escolha popular para modelar dados inflacionados por zeros, pois acomoda simultaneamente a inflação de zeros e a sobredispersão, característica de um dos parâmetros da distribuição binomial negativa, se mostrando como alternativa ao modelo Poisson.
 
-A distribuição condicional completa para Z será Bernoulli:
-\begin{align}
-    Z_i|\textbf{x},\lambda,\phi \sim Ber\left( \frac{pI(x_i = 0)}{pI(x_i = 0) + \frac{\Gamma(\phi + x_i)}{\Gamma(\phi)x_i!}\lambda^\phi(1-\lambda)^{x_i}(1-p)} \right).
-\end{align}
+Considere a seguinte função de probabilidade aumentada:
 
-Distribuição condicional completa para $p$:
-\begin{align}
-    p|\textbf{x},\lambda,\phi \sim \textit{Beta}\left(\sum_{i=1}^{n}z_i+1, n - \sum_{i=1}^{n}z_i + 1 \right).
-\end{align}
+![Função de probabilidade aumentada](https://latex.codecogs.com/png.image?\dpi{150}f(\mathbf{x},\;z\mid\lambda,\phi)%20=%20\prod_{i=1}^{n}%20\left[%20\frac{\Gamma(\phi&space;+&space;x_i)}{\Gamma(\phi)x_i!}&space;\lambda^{\phi}(1-\lambda)^{x_i}(1-p)\right]^{1-z_i}%20\left[p\,I(x_i%20=%200)\right]^{z_i})
 
-Estabelecendo que a priori para $\lambda$ é $Beta (\alpha, \beta)$, segue a condicional completa:
-\begin{align}
-    \pi(\lambda|\mathbf{x},z,\phi) &\propto \prod_{i=1}^{n}\left[ \lambda^\phi(1-\lambda)^{x_i} \right]^{1-z_i} \lambda^{\alpha-1}(1-\lambda)^{\beta-1} \\
-    &\propto \left( \lambda^{\phi\sum_{i=1}^{n}(1-z_i)}(1-\lambda)^{\sum_{i=1}^{n}x_i(1-z_i)} \right) \lambda^{\alpha-1}(1-\lambda)^{\beta-1} \notag \\
-    &\propto \lambda^{\phi\sum_{i=1}^{n}(1-z_i) + \alpha -1}(1-\lambda)^{\sum_{i=1}^{n}x_i(1-z_i) + \beta -1}; \notag 
-\end{align}
+A distribuição condicional completa para \(Z\) será Bernoulli:
 
-Portanto,
-\begin{align}
-     \lambda|\mathbf{x}, z, \phi &\sim \text{Beta}\left(\phi\sum_{i=1}^{n}(1-z_i) + \alpha, \sum_{i=1}^{n}x_i(1-z_i) + \beta \right).
-\end{align}
+![Condicional completa Z](https://latex.codecogs.com/png.image?\dpi{150}Z_i\mid\mathbf{x},\lambda,\phi%20\sim\mathrm{Bernoulli}\left(\frac{pI(x_i=0)}{pI(x_i=0)%20+%20\frac{\Gamma(\phi&space;+&space;x_i)}{\Gamma(\phi)x_i!}\lambda^{\phi}(1-\lambda)^{x_i}(1-p)}\right))
 
+Distribuição condicional completa para \(p\):
 
-Por último, dada a \textit{priori} \( \text{Gama}(\delta, \eta) \), a condicional completa para \( \phi \) é dada por:
-\begin{align}
-    \pi(\phi|\mathbf{x}, z, \lambda) &\propto \prod_{i=1}^{n}\left[ \frac{\Gamma(\phi + x_i)}{\Gamma(\phi)}\lambda^\phi \right] \phi^{\delta-1} e^{-\eta \phi}.
-\end{align}
+![Condicional completa p](https://latex.codecogs.com/png.image?\dpi{150}p\mid\mathbf{x},\lambda,\phi%20\sim%20\mathrm{Beta}\left(\sum_{i=1}^nz_i+1,\;n-\sum_{i=1}^nz_i+1\right))
 
-A simulação dos parâmetros do modelo ZINB ocorre de forma similar ao modelo binomial negativo, utilizando o Metropolis-Hastings para simular $\phi$ enquanto $\rho$, $\lambda$ e $z$ são simulados pelor amostrador de Gibbs.
+Assumindo a priori \(\lambda \sim \mathrm{Beta}(\alpha,\beta)\), temos:
+
+![Condicional completa λ](https://latex.codecogs.com/png.image?\dpi{150}\lambda\mid\mathbf{x},z,\phi%20\sim%20\mathrm{Beta}\left(\phi\sum_{i=1}^n(1-z_i)&plus;\alpha,\;\sum_{i=1}^n&space;x_i(1-z_i)&plus;\beta\right))
+
+Por fim, assumindo a priori \(\phi \sim \mathrm{Gamma}(\delta,\eta)\), a condicional completa para \(\phi\) é proporcional a:
+
+![Condicional completa φ](https://latex.codecogs.com/png.image?\dpi{150}\pi(\phi\mid\mathbf{x},z,\lambda)%20\propto%20\prod_{i=1}^{n}%20\frac{\Gamma(\phi+x_i)}{\Gamma(\phi)}\lambda^{\phi}%20\cdot\phi^{\delta-1}%20e^{-\eta\phi})
+
+A simulação dos parâmetros do modelo ZINB ocorre de forma similar ao modelo binomial negativo:
+- \(\phi\): por **Metropolis–Hastings**,
+- \(p\), \(\lambda\) e \(z\): por **amostrador de Gibbs**.
