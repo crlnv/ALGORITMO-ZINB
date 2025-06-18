@@ -1,6 +1,6 @@
 # OIIIIIIIII
 
-**Um dos modelos que usei no meu trabalho de conclusão de curso sobre modelos inflacionados no contexto da Inferência Bayesiana foi o Zero-Inflated Negative Binomial. Abaixo segue um trecho sobre a seção do ZINB assim como também a implementação no R com um dos conjuntos de dados que eu usei.**
+**Um dos modelos que usei no meu trabalho de conclusão de curso sobre modelos inflacionados no contexto da Inferência Bayesiana foi o Zero-Inflated Negative Binomial. Abaixo segue um trecho sobre a seção do ZINB assim como também a implementação no R com um dos conjuntos de dados utilizados.**
 
 ## ZINB
 
