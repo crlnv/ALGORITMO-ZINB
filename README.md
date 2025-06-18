@@ -34,5 +34,5 @@ Por último, dada a *priori*
 A simulação dos parâmetros do modelo ZINB ocorre de forma similar ao modelo binomial negativo:
 
 - ![phi](https://latex.codecogs.com/png.image?\dpi{110}\phi): por Metropolis–Hastings  
-- ![p, lambda, z](https://latex.codecogs.com/png.image?\dpi{110}p,\;\lambda,\;z): por amostrador de Gibbs
+- ![p, lambda, z](https://latex.codecogs.com/png.image?\dpi{110}p,\\lambda,\z): por amostrador de Gibbs
 
