@@ -4,7 +4,7 @@
 
 library(readr)
 
-# Descritiva
+# Dados
 
 morteraios <- read_csv("MORTES POR RAIO - Number of lightning fatalities by category per year 1995 through 2012.csv")
 
